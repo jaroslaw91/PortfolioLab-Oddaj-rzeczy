@@ -1,6 +1,7 @@
 .header {
     width: 100%;
     position: absolute;
+    z-index: 1;
     &__nav {
         margin-top: 37px;
         margin-right: 42px;
@@ -12,6 +13,7 @@
             margin-right: 142px;
         }
         &--list-mobile {
+            cursor: pointer;
             span {
                 margin: 10px;
                 width: 50px;
@@ -34,7 +36,12 @@
                 padding: 9px 10px;
                 font-size: 0.778em;
                 &:last-of-type {
-                    border: 0.75px solid $color-3;
+                    border: .75px solid $color-3;
+                    &:hover {
+                       background-color: $color-3;
+                       text-decoration: none;
+                       transition: .5s;
+                    }
                 }
                 &:hover {
                     text-decoration: underline;
@@ -48,11 +55,11 @@
                     margin-right: 0;
                 }
                 &:hover {
-                    text-decoration: underline;
+                    color: $color-3;
                 }
             }
             .active {
-                border: 0.75px solid #3C3C3C;
+                border: .75px solid #3C3C3C;
             }
         }
     }

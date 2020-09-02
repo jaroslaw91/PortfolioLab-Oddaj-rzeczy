@@ -1,4 +1,8 @@
 import React from 'react';
+import {
+    HashRouter as Router,
+    Link,
+} from "react-router-dom";
 
 import decoration from "./../assets/decoration.svg";
 
@@ -8,6 +12,16 @@ function Main() {
             <div className="main__heading">
                 <h1>Zacznij pomagać!<br />Oddaj niechciane rzeczy w zaufane ręce</h1>
                 <img src={decoration} />
+                <div>
+                    <Router>
+                        <Link>
+                            <p>Oddaj<br />rzeczy</p>
+                        </Link>
+                        <Link>
+                            <p>Zorganizuj<br />zbiórkę</p>
+                        </Link>
+                    </Router>
+                </div>
             </div>
         </main>
     );

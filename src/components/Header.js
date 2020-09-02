@@ -22,7 +22,7 @@ function Header() {
                     <Link to="main" className="header__nav--list-item" activeClass="active" spy={spy} smooth={smooth} offset={offset} duration={duration}>
                         <li>Start</li>
                     </Link>
-                    <Link className="header__nav--list-item" activeClass="s" spy={spy} smooth={smooth} offset={offset} duration={duration}>
+                    <Link to="foursteps" className="header__nav--list-item" activeClass="s" spy={spy} smooth={smooth} offset={offset} duration={duration}>
                         <li>O co chodzi?</li>
                     </Link>
                     <Link className="header__nav--list-item" activeClass="s" spy={spy} smooth={smooth} offset={offset} duration={duration}>
