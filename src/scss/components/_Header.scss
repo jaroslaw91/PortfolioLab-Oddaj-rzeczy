@@ -1,0 +1,59 @@
+.header {
+    width: 100%;
+    position: absolute;
+    &__nav {
+        margin-top: 37px;
+        margin-right: 42px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        flex-direction: column;
+        @include desktop {
+            margin-right: 142px;
+        }
+        &--list-mobile {
+            span {
+                margin: 10px;
+                width: 50px;
+                height: 2px;
+                background-color: $color-5;
+                display: block;
+            }
+            @include desktop {
+                display: none;
+            }
+        }
+        &--list {
+            margin-bottom: 17px;
+            display: none;
+            @include desktop {
+                display: flex;
+            }
+            &-user {
+                cursor: pointer;
+                padding: 9px 10px;
+                font-size: 0.778em;
+                &:last-of-type {
+                    border: 0.75px solid $color-3;
+                }
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            &-item {
+                cursor: pointer;
+                margin-right: 15px;
+                padding: 9px 20px;
+                &:last-of-type {
+                    margin-right: 0;
+                }
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            .active {
+                border: 0.75px solid #3C3C3C;
+            }
+        }
+    }
+}
