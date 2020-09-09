@@ -12,20 +12,114 @@
         @include desktop {
             margin-right: 142px;
         }
-        &--list-mobile {
+        &--hmb {
             cursor: pointer;
+            width: 50px;
+            height: 66px;
+            z-index: 1;
+            @include desktop {
+                display: none;
+            }
             span {
                 margin: 10px;
                 width: 50px;
                 height: 2px;
                 background-color: $color-5;
                 display: block;
+                transition: .5s;
+            }
+            &-close {
+                cursor: pointer;
+                width: 50px;
+                height: 66px;
+                position: relative;
+                z-index: .5s;
+                z-index: 1;
+                @include desktop {
+                    display: none;
+                }
+                span {
+                    top: 20px;
+                    right: 0;
+                    left: 10px;
+                    width: 50px;
+                    height: 2px;
+                    background-color: $color-5;
+                    display: block;
+                    position: absolute;
+                    transition: .5s;
+                    &:nth-of-type(1) {
+                        margin-left: 0px;
+                        transform: rotate(45deg);
+                    }
+                    &:nth-of-type(2) {
+                        width: 0;
+                    }
+                    &:nth-of-type(3) {
+                        transform: rotate(-45deg);
+                    }
+                }
             }
             @include desktop {
                 display: none;
             }
         }
-        &--list {
+        &--mobile {
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background-color: $color-7;
+            position: absolute;
+            transition: 1s;
+            @include desktop {
+                display: none;
+            }
+            &-list {
+                margin-bottom: 17px;
+                width: 100%;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                &-user {
+                    cursor: pointer;
+                    padding: 9px 10px;
+                    font-size: 0.778em;
+                    color: $color-5;
+                    &:last-of-type {
+                        border: .75px solid $color-3;
+                        &:hover {
+                           background-color: $color-3;
+                           text-decoration: none;
+                           transition: .5s;
+                        }
+                    }
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+                &-item {
+                    cursor: pointer;
+                    margin-right: 0;
+                    padding: 9px 20px;
+                    &:first-of-type {
+                        border: none;
+                        @include desktop {
+                            border: .75px solid #3C3C3C;
+                        }
+                    }
+                    &:last-of-type {
+                        margin-right: 0;
+                    }
+                    &:hover {
+                        color: $color-3;
+                    }
+                }
+            }
+        }
+        &--desktop {
             margin-bottom: 17px;
             display: none;
             @include desktop {
@@ -35,6 +129,7 @@
                 cursor: pointer;
                 padding: 9px 10px;
                 font-size: 0.778em;
+                color: $color-5;
                 &:last-of-type {
                     border: .75px solid $color-3;
                     &:hover {
@@ -51,15 +146,15 @@
                 cursor: pointer;
                 margin-right: 15px;
                 padding: 9px 20px;
+                &:first-of-type {
+                    border: .75px solid #3C3C3C;
+                }
                 &:last-of-type {
                     margin-right: 0;
                 }
                 &:hover {
                     color: $color-3;
                 }
-            }
-            .active {
-                border: .75px solid #3C3C3C;
             }
         }
     }
