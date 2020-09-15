@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-function Contact() {
-    return (
-        <>
-            Contact
-        </>
-    );
+export default class Contact extends Component {
+    render() {
+        return (
+            <>
+                Contact
+            </>
+        );
+    }
 }
-
-export default Contact;

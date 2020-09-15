@@ -5,15 +5,7 @@ import {
     Link,
 } from "react-router-dom";
 
-import { AppContext } from "../../../AppContext";
-
 export default class DesktopMenu extends Component {
-    static contextType = AppContext;
-
-    componentWillMount() {
-        const context = this.context;
-    }
-
     render() {
         return (
             <>
@@ -28,19 +20,19 @@ export default class DesktopMenu extends Component {
                     </Router>
                 </ul>
                 <ul className="header__nav--desktop">
-                    <Scroll to="main" className="header__nav--desktop-item" activeClass="active" spy={this.spy} smooth={this.smooth} offset={this.offset} duration={this.duration}>
+                    <Scroll to="main" className="header__nav--desktop-item" activeClass="active">
                         <li>Start</li>
                     </Scroll>
-                    <Scroll to="fourSteps" className="header__nav--desktop-item" activeClass="active" spy={this.spy} smooth={this.smooth} offset={this.offset} duration={this.duration}>
+                    <Scroll to="fourSteps" className="header__nav--desktop-item" activeClass="active">
                         <li>O co chodzi?</li>
                     </Scroll>
-                    <Scroll to="aboutUs" className="header__nav--desktop-item" activeClass="active" spy={this.spy} smooth={this.smooth} offset={this.offset} duration={this.duration}>
+                    <Scroll to="aboutUs" className="header__nav--desktop-item" activeClass="active">
                         <li>O nas</li>
                     </Scroll>
-                    <Scroll to="whoWeHelp" className="header__nav--desktop-item" activeClass="active" spy={this.spy} smooth={this.smooth} offset={this.offset} duration={this.duration}>
+                    <Scroll to="whoWeHelp" className="header__nav--desktop-item" activeClass="active">
                         <li>Fundacja i organizacje</li>
                     </Scroll>
-                    <Scroll to="contact" className="header__nav--desktop-item" activeClass="active" spy={this.spy} smooth={this.smooth} offset={this.offset} duration={this.duration}>
+                    <Scroll to="contact" className="header__nav--desktop-item" activeClass="active">
                         <li>Kontakt</li>
                     </Scroll>
                 </ul>
