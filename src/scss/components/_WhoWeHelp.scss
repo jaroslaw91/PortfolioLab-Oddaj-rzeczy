@@ -1,0 +1,33 @@
+.whoWeHelp {
+    padding: 70px 40px;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h2 {
+        padding: 0 40px;
+        font-size: 2.111em;
+        letter-spacing: -.76px;
+    }
+    img {
+        margin-top: 25px;
+        margin-bottom: 41px;
+    }
+    &__box {
+        width: 750px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h3 {
+            margin: 0 107px;
+            padding: 23px 42px;
+            font-size: 1.333em;
+            font-weight: 400;
+        }
+        .active {
+            border: .75px solid #3C3C3C;
+        }
+    }
+}

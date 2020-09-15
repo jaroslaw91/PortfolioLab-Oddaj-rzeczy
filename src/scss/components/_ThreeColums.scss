@@ -1,8 +1,10 @@
+$bg: url("./../../assets/3-columns-background.png");
+
 .threeColums {
     padding: 0 163px;
     width: 100%;
     min-height: 384px;
-    background-image: url(./../../assets/3-columns-background.png);
+    background-image: $bg;
     display: flex;
     justify-content: space-between;
     align-items: center;
