@@ -15,12 +15,13 @@
         margin-top: 25px;
         margin-bottom: 41px;
     }
-    &__box {
+    &__header {
         width: 750px;
         display: flex;
         justify-content: center;
         align-items: center;
         h3 {
+            cursor: pointer;
             margin: 0 107px;
             padding: 23px 42px;
             font-size: 1.333em;
@@ -28,6 +29,34 @@
         }
         .active {
             border: .75px solid #3C3C3C;
+        }
+    }
+    .desc {
+        margin: 70px 0;
+        width: 640px;
+        transition: 1s;
+        font-size: 1.222em;
+    }
+    &__box {
+        margin: 34px 0;
+        padding: 0 278px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: $font-alt;
+        &--header {
+           text-align: left;
+           display: flex;
+           justify-content: center;
+           align-items: flex-start;
+           flex-direction: column;
+           h4 {
+               font-size: 1.444em;
+           }
+           p {
+               font-style: italic;
+           }
         }
     }
 }

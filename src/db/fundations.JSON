@@ -1,6 +1,7 @@
 {
    "fundations": [
       {
+         "id": 1,
          "name": "Fundacjom",
          "desc": "W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.",
          "items": [
@@ -22,6 +23,7 @@
          ]
       },
       {
+         "id": 2,
          "name": "Organizacjom pozarządowym",
          "desc": "Ipsum mollit ad amet veniam et velit non. Et pariatur eu incididunt commodo voluptate irure cupidatat tempor commodo. Exercitation est sint voluptate sit minim ex qui esse laborum adipisicing aute quis aliquip. Id officia pariatur eu laborum ex esse velit qui dolor adipisicing proident.",
          "items": [
@@ -58,6 +60,7 @@
          ]
       },
       {
+         "id": 3,
          "name": "Lokalnym zbiórkom",
          "desc": "Lorem pariatur officia dolor consequat laborum fugiat tempor est ex ullamco sunt elit minim consequat. Reprehenderit sit eu duis officia laborum cupidatat occaecat sunt. Enim esse duis eiusmod excepteur ut officia labore nulla et in proident. Veniam esse quis ad est. Adipisicing aliqua laboris sit eu laborum laborum voluptate qui sit nostrud qui consequat.",
          "items": [
