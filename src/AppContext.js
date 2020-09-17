@@ -8,11 +8,16 @@ const AppContextProvider = ({ children }) => {
     const [fundations, setFundations] = useState([]);
     const [organizations, setOrganizations] = useState([]);
     const [local, setLocal] = useState([]);
+    const [desc, setDesc] = useState("");
+    const [items, setItems] = useState([]);
+    const [fundationName, setFundationName] = useState("Fundacja");
 
     useEffect(() => {
         axios.get("http://localhost:3005/fundations")
             .then(res => {
                 setFundations(res.data[0]);
+                setDesc(res.data[0].desc);
+                setItems(res.data[0].items);
                 setOrganizations(res.data[1]);
                 setLocal(res.data[2]);
             })
@@ -25,8 +30,25 @@ const AppContextProvider = ({ children }) => {
             : setMenu(true);
     }
 
+    const onSelect = e => {
+        const id = e.target.id;
+        if (id == 1) {
+            setDesc(fundations.desc);
+            setItems(fundations.items);
+            setFundationName("Fundacja");
+        } else if (id == 2) {
+            setDesc(organizations.desc);
+            setItems(organizations.items);
+            setFundationName("Organizacja");
+        } else if (id == 3) {
+            setDesc(local.desc);
+            setItems(local.items);
+            setFundationName("Zbiórka");
+        }
+    }
+
     return (
-        <AppContext.Provider value={{ menu, openMenu, fundations, organizations, local }}>
+        <AppContext.Provider value={{ menu, openMenu, fundations, organizations, local, onSelect, desc, items, fundationName }}>
             {children}
         </AppContext.Provider>
     )
