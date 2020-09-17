@@ -11,6 +11,8 @@ const AppContextProvider = ({ children }) => {
     const [desc, setDesc] = useState("");
     const [items, setItems] = useState([]);
     const [fundationName, setFundationName] = useState("Fundacja");
+    const [currentPage, setCurrentPage] = useState(1);
+    const perPage = 3;
 
     useEffect(() => {
         axios.get("http://localhost:3005/fundations")
@@ -47,8 +49,12 @@ const AppContextProvider = ({ children }) => {
         }
     }
 
+    const onPage = (e) => {
+        setCurrentPage(Number(e.target.id));
+    }
+
     return (
-        <AppContext.Provider value={{ menu, openMenu, fundations, organizations, local, onSelect, desc, items, fundationName }}>
+        <AppContext.Provider value={{ menu, openMenu, fundations, organizations, local, onSelect, desc, items, currentPage, perPage, fundationName, onPage }}>
             {children}
         </AppContext.Provider>
     )
