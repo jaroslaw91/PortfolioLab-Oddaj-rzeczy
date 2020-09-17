@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import { AppContext } from "./../../../AppContext";
 
 import decoration from "./../../../assets/decoration.svg";
+import ToDo from "./Pagination";
 
 export default class WhoWeHelp extends Component {
     static contextType = AppContext;
 
     render() {
-        const context = this.context;
+        const { fundations, organizations, local, onSelect, desc } = this.context;
 
         return (
             <div className="whoWeHelp" name="whoWeHelp">
@@ -15,34 +16,26 @@ export default class WhoWeHelp extends Component {
                 <img src={decoration} />
                 <div className="whoWeHelp__header">
                     <h3
-                        id={context.fundations.id}
-                        onClick={context.onSelect}
-                        className={context.fundations.desc === context.desc ? "active" : null}>
-                        {context.fundations.name}
+                        id={fundations.id}
+                        onClick={onSelect}
+                        className={fundations.desc === desc ? "active" : null}>
+                        {fundations.name}
                     </h3>
                     <h3
-                        id={context.organizations.id}
-                        onClick={context.onSelect}
-                        className={context.organizations.desc === context.desc ? "active" : null}>
-                        {context.organizations.name}
+                        id={organizations.id}
+                        onClick={onSelect}
+                        className={organizations.desc === desc ? "active" : null}>
+                        {organizations.name}
                     </h3>
                     <h3
-                        id={context.local.id}
-                        onClick={context.onSelect}
-                        className={context.local.desc === context.desc ? "active" : null}>
-                        {context.local.name}
+                        id={local.id}
+                        onClick={onSelect}
+                        className={local.desc === desc ? "active" : null}>
+                        {local.name}
                     </h3>
                 </div>
-                <p className="desc">{context.desc}</p>
-                {context.items.map(item => (
-                    <div className="whoWeHelp__box" key={item.header}>
-                        <div className="whoWeHelp__box--header">
-                            <h3>{context.fundationName} {item.header}</h3>
-                            <p>Cel i misja: {item.subheader}</p>
-                        </div>
-                        <p>{item.desc}</p>
-                    </div>
-                ))}
+                <p className="desc">{desc}</p>
+                <ToDo />
 
             </div>
         );
